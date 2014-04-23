@@ -11,12 +11,12 @@ class LruCache(object):
 
     def checkfull(self, app_launched):
         if dlist.size < maxsize:
-	   print 'available slots '+ app_launched
+#	   print 'available slots '+ app_launched
 	   dlist.appendleft(app_launched)
 	   return None
 	else:
 	   dlist.popright()
-	   print 'max reached '+ app_launched
+#	   print 'max reached '+ app_launched
            dlist.appendleft(app_launched)
 	   return None
     
@@ -31,7 +31,7 @@ class LruCache(object):
             if app_launched == app:
 	    	hits+= 1
 	        if app != dlist[0]:
-	            print 'its a match '+ app
+	 #          print 'its a match '+ app
 		    node = dlist.nodeat(count-1)
 	            dlist.remove(node)
 		    dlist.appendleft(app_launched)
@@ -49,18 +49,23 @@ class LruCache(object):
     	if dlist.size == 0:
             dlist.appendleft(app_launched)
 	    misses += 1
-	    print "Application appended is " + app_launched
+	 #  print "Application appended is " + app_launched
 	    return None
 	else:
             lru.alreadyexists(app_launched)
  
 
     def pushapplications(self, maxsize, logs):
+    	log_count = 0
+	global hits
     	for app_launched in logs:
+	    log_count+= 1
+	    if log_count == 5 or log_count == 10 or log_count == 15 or log_count == 20 or log_count ==25:
+	    	 print '-' * 80
+	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses
 	    if dlist.size != 0 and app_launched == dlist[0]:
-	         global hits
 	    	 hits += 1
-	         print "Both are same apps "+ app_launched +" and  "+ dlist[0]
+	   #     print "Both are same apps "+ app_launched +" and  "+ dlist[0]
 	    else:
 	         lru.checkempty(app_launched)
     
@@ -68,7 +73,7 @@ class LruCache(object):
     def readinglogs(self, maxsize, filename):
         '''Reading the log file'''
         txt = open(filename)
-        print "Here is your file %r: " % filename
+        print "The log file used is %r: " % filename
 	global logs
         logs = [line.strip() for line in open(filename)]
        # print '\n'.join(logs)
@@ -81,9 +86,10 @@ if __name__ == "__main__":
     script, filename = argv
     maxsize =16
     lru.readinglogs(maxsize, filename)
-    print dlist
-    print dlist.size
-    print 'hits = ', hits
-    print 'misses = ', misses
-
+    print '#' * 80
+    print 'Final Contents of Stack => \n',dlist
+    print 'Stack Size   = ',dlist.size
+    print 'Total hits   = ', hits
+    print 'Total misses = ', misses
+    print '#' * 80
 
