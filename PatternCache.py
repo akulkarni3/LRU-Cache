@@ -14,17 +14,14 @@ class LruCache(object):
     def checkfull(self, app_launched):
     	global reboots
         if dlist.size < maxsize:
-#	   print 'available slots '+ app_launched
 	   dlist.appendleft(app_launched)
 	   return None
 	else:
 	   for past_app_launched in historylist:
 	       if past_app_launched == app_launched:
-#	            print 'rebooted application = '+ app_launched + past_app_launched
 	            reboots +=1
 		    break
 	   dlist.popright()
-#	   print 'max reached '+ app_launched
            dlist.appendleft(app_launched)
 	   return None
     
@@ -39,7 +36,6 @@ class LruCache(object):
             if app_launched == app:
 	    	hits+= 1
 	        if app != dlist[0]:
-	 #          print 'its a match '+ app
 		    node = dlist.nodeat(count-1)
 	            dlist.remove(node)
 		    dlist.appendleft(app_launched)
@@ -57,24 +53,45 @@ class LruCache(object):
     	if dlist.size == 0:
             dlist.appendleft(app_launched)
 	    misses += 1
-	 #  print "Application appended is " + app_launched
 	    return None
 	else:
             lru.alreadyexists(app_launched)
 
-     
+    def automatedpush(self, app_launched,i,temp):
+    	global misses
+	global breakpoints
+
+    	if dlist.size == 0:
+             dlist.appendleft(app_launched)
+	     k = 0
+	     print 'temp and i = ', temp, ' & ',i
+	     print breakpoints[i]
+	     while k < breakpoints[i]-1:
+	          print array[temp+k]
+	          dlist.append(array[temp+k])
+                  k += 1
+	     misses += 1
+	     return None
+	else:
+             lru.automaticexists(app_launched)
+
+    
     def patternscheck(self,app_launched):
         '''Checking if there is pattern'''
 	global breakpoints
 	global array
 	index = 0
+	i = -1
 	for traverse in breakpoints:
+	     i += 1
 	     index = index + traverse
 	     temp = index - traverse
 	     if app_launched == array[temp]:
 	          print 'its a match at position i =', temp+1
-#		  lru.automatedpush(app_launched)
+		  lru.automatedpush(app_launched, i+1, temp+1)
 		  return True
+	     else: 
+	          return False
 
     def pushapplications(self, maxsize, logs):
     	global log_count
@@ -87,10 +104,9 @@ class LruCache(object):
 	     
 	    if dlist.size != 0 and app_launched == dlist[0]:
 		 hits += 1
-	    else
-	         if lru.patternscheck(app_launched):
+	    else:
+	         if not lru.patternscheck(app_launched):
 	    	      '''Do something'''
-	         else:
 	              lru.checkempty(app_launched)
 	    
 	    historylist.appendleft(app_launched)
@@ -104,7 +120,6 @@ class LruCache(object):
 	global logs
 	global breakpoints
         logs = [line.strip() for line in open(filename)]
-       # print '\n'.join(logs)
 	lru.pushapplications(maxsize,logs)
 
     def getpatterns(self):
