@@ -61,7 +61,20 @@ class LruCache(object):
 	    return None
 	else:
             lru.alreadyexists(app_launched)
- 
+
+     
+    def patternscheck(self,app_launched):
+        '''Checking if there is pattern'''
+	global breakpoints
+	global array
+	index = 0
+	for traverse in breakpoints:
+	     index = index + traverse
+	     temp = index - traverse
+	     if app_launched == array[temp]:
+	          print 'its a match at position i =', temp+1
+#		  lru.automatedpush(app_launched)
+		  return True
 
     def pushapplications(self, maxsize, logs):
     	global log_count
@@ -71,23 +84,46 @@ class LruCache(object):
 	    if log_count == 5 or log_count == 10 or log_count == 15 or log_count == 20 or log_count == 25:
 	    	 print '-' * 80
 	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses
+	     
 	    if dlist.size != 0 and app_launched == dlist[0]:
-	    	 hits += 1
-	   #     print "Both are same apps "+ app_launched +" and  "+ dlist[0]
-	    else:
-	         lru.checkempty(app_launched)
+		 hits += 1
+	    else
+	         if lru.patternscheck(app_launched):
+	    	      '''Do something'''
+	         else:
+	              lru.checkempty(app_launched)
 	    
 	    historylist.appendleft(app_launched)
     
+
     
     def readinglogs(self, maxsize, filename):
         '''Reading the log file'''
         txt = open(filename)
         print "The log file used is %r: " % filename
 	global logs
+	global breakpoints
         logs = [line.strip() for line in open(filename)]
        # print '\n'.join(logs)
 	lru.pushapplications(maxsize,logs)
+
+    def getpatterns(self):
+         '''Get Patterns from User'''
+	 global breakpoints
+	 global array
+
+	 patterns = int(raw_input('How many patterns are to be inserted ? Preferably less than three \n'))
+	 print "Enter size of ALL Patterns starting from first to last seperated by space "
+	 patternsize =  raw_input()
+	 breakpoints = map(int,patternsize.split())
+	 breakpoints.insert(0,0)
+	 print breakpoints
+         print 'Print out Patterns seperated by a space'
+         patternsize =  raw_input()
+	 array = map(str,patternsize.split())
+	 print array
+	 return None
+
 
 	
 if __name__ == "__main__":
@@ -95,7 +131,8 @@ if __name__ == "__main__":
     dlist = dllist()
     historylist = dllist()
     script, filename = argv
-    maxsize =16
+    lru.getpatterns()
+    maxsize = 16
     lru.readinglogs(maxsize, filename)
     print '#' * 80
     print 'Final Contents of Stack   => \n',dlist
