@@ -11,6 +11,17 @@ reboots = 0
 
 class LruCache(object):
 
+    def autoinsert(self, app_launched, i):
+        global temp
+        global breakpoints
+	k = 0
+	print 'breakpoints in autoinsert', breakpoints[i]
+        while k < breakpoints[i]:
+	     print array[temp+k]
+	     dlist.append(array[temp+k])
+             k += 1
+
+
     def checkfull(self, app_launched):
     	global reboots
         if dlist.size < maxsize:
@@ -25,6 +36,20 @@ class LruCache(object):
            dlist.appendleft(app_launched)
 	   return None
     
+    def autofull(self, app_launched):
+    	global reboots
+        if dlist.size < maxsize:
+	   dlist.appendleft(app_launched)
+	   return None
+	else:
+	   for past_app_launched in historylist:
+	       if past_app_launched == app_launched:
+	            reboots +=1
+		    break
+	   dlist.popright()
+           dlist.appendleft(app_launched)
+	   return None
+   
 		     
 
     def alreadyexists(self, app_launched):
@@ -51,47 +76,47 @@ class LruCache(object):
     def checkempty(self, app_launched):
     	global misses
     	if dlist.size == 0:
-            dlist.appendleft(app_launched)
+	    dlist.appendleft(app_launched)
 	    misses += 1
 	    return None
 	else:
             lru.alreadyexists(app_launched)
+
 
     def automatedpush(self, app_launched,i,temp):
     	global misses
 	global breakpoints
 
     	if dlist.size == 0:
-             dlist.appendleft(app_launched)
-	     k = 0
 	     print 'temp and i = ', temp, ' & ',i
+	     if i != 1:
+	          i -= 1
 	     print breakpoints[i]
-	     while k < breakpoints[i]-1:
-	          print array[temp+k]
-	          dlist.append(array[temp+k])
-                  k += 1
+	     lru.autoinsert(app_launched, i)
 	     misses += 1
 	     return None
 	else:
-             lru.automaticexists(app_launched)
+             lru.autoexists(app_launched)
 
     
     def patternscheck(self,app_launched):
         '''Checking if there is pattern'''
 	global breakpoints
 	global array
+	global temp
+	global i
+
 	index = 0
 	i = -1
 	for traverse in breakpoints:
 	     i += 1
 	     index = index + traverse
 	     temp = index - traverse
+	     print 'position of i = ',i
 	     if app_launched == array[temp]:
 	          print 'its a match at position i =', temp+1
 		  lru.automatedpush(app_launched, i+1, temp+1)
 		  return True
-	     else: 
-	          return False
 
     def pushapplications(self, maxsize, logs):
     	global log_count
