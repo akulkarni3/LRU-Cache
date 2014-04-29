@@ -17,8 +17,8 @@ class LruCache(object):
 	k = 0
 	print 'breakpoints in autoinsert', breakpoints[i]
         while k < breakpoints[i]:
-	     print array[temp+k]
-	     dlist.append(array[temp+k])
+	     print array[temp+breakpoints[i]-1-k]
+	     dlist.appendleft(array[temp+breakpoints[i]-1-k])
              k += 1
 
 
