@@ -6,20 +6,19 @@ import pdb
 
 hits = 0
 misses = 0
-log_count =0
+log_count = 0
 reboots = 0
 
 class LruCache(object):
 
-    def autoinsert(self, app_launched, i):
-        global temp
-        global breakpoints
-	k = 0
-	print 'breakpoints in autoinsert', breakpoints[i]
-        while k < breakpoints[i]:
-	     print array[temp+breakpoints[i]-1-k]
-	     dlist.appendleft(array[temp+breakpoints[i]-1-k])
-             k += 1
+
+#    def autoinsert(self, app_launched, i):
+#        global temp
+#        global breakpoints
+#	k = 0
+#        while k < breakpoints[i]:
+#	     dlist.appendleft(array[temp+breakpoints[i]-1-k])
+#             k += 1
 
 
     def checkfull(self, app_launched):
@@ -35,22 +34,55 @@ class LruCache(object):
 	   dlist.popright()
            dlist.appendleft(app_launched)
 	   return None
-    
-    def autofull(self, app_launched):
+
+
+    def autofull(self,app_launched, i, temp):
     	global reboots
-        if dlist.size < maxsize:
-	   dlist.appendleft(app_launched)
-	   return None
-	else:
-	   for past_app_launched in historylist:
-	       if past_app_launched == app_launched:
-	            reboots +=1
-		    break
-	   dlist.popright()
-           dlist.appendleft(app_launched)
-	   return None
+	global array
+	global breakpoints
+        for past_app_launched in historylist:
+	   if past_app_launched == app_launched:
+	       reboots +=1
+	       break
+	k = 0
+	while k < breakpoints[i]:
+
+           if dlist.size < maxsize:
+	       dlist.appendleft(array[temp+breakpoints[i]-1-k])
+	   else:
+	       dlist.popright()
+               dlist.appendleft(array[temp+breakpoints[i]-1-k])
+	   k += 1
+	
+	return None
    
-		     
+
+    def autoexists(self, app_launched, i, temp):
+        count = 0
+	global hits
+	global misses
+	global array
+	global breakpoints
+	k = 0
+	print 'breakpoints at i', i, breakpoints[i]
+	while k < breakpoints[i]:
+	    for app in dlist:
+	        count+= 1 
+                if array[temp+breakpoints[i]-1-k] == app:
+	    	    hits+= 1
+	            if app != dlist[0]:
+		        node = dlist.nodeat(count-1)
+	                dlist.remove(node)
+		        dlist.appendleft(array[temp+breakpoints[i]-1-k])
+		        return None		    
+                else:
+	            if count == dlist.size:
+	                lru.autofull(app_launched, i,temp)
+		        misses += 1
+		        return None
+	    k += 1		
+
+ 
 
     def alreadyexists(self, app_launched):
         count = 0
@@ -73,6 +105,7 @@ class LruCache(object):
 		     return None
 
 
+
     def checkempty(self, app_launched):
     	global misses
     	if dlist.size == 0:
@@ -83,46 +116,55 @@ class LruCache(object):
             lru.alreadyexists(app_launched)
 
 
-    def automatedpush(self, app_launched,i,temp):
+
+    def autoemptycheck(self, app_launched,i,temp):
     	global misses
 	global breakpoints
 
     	if dlist.size == 0:
-	     print 'temp and i = ', temp, ' & ',i
 	     if i != 1:
 	          i -= 1
-	     print breakpoints[i]
-	     lru.autoinsert(app_launched, i)
+#	     lru.autoinsert(app_launched, i)
+
+             k = 0
+	     print array[temp]
+	     print 'element = ', temp+breakpoints[i]-1-k
+
+             while k < breakpoints[i]:
+	        dlist.appendleft(array[temp+breakpoints[i]-1-k])
+                k += 1
 	     misses += 1
 	     return None
 	else:
-             lru.autoexists(app_launched)
+             lru.autoexists(app_launched, i, temp)
 
-    
+
+
     def patternscheck(self,app_launched):
         '''Checking if there is pattern'''
 	global breakpoints
 	global array
-	global temp
 	global i
 
 	index = 0
-	i = -1
+	i = 0
 	for traverse in breakpoints:
-	     i += 1
 	     index = index + traverse
 	     temp = index - traverse
-	     print 'position of i = ',i
+	     i += 1
 	     if app_launched == array[temp]:
-	          print 'its a match at position i =', temp+1
-		  lru.automatedpush(app_launched, i+1, temp+1)
+	          print 'its a match at position i =', temp, "starting at i = 0"
+		  lru.autoemptycheck(app_launched, i, temp)
 		  return True
+	     
+
+
 
     def pushapplications(self, maxsize, logs):
     	global log_count
 	global hits
     	for app_launched in logs:
-	    log_count+= 1
+	    log_count += 1
 	    if log_count == 5 or log_count == 10 or log_count == 15 or log_count == 20 or log_count == 25:
 	    	 print '-' * 80
 	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses
@@ -131,7 +173,7 @@ class LruCache(object):
 		 hits += 1
 	    else:
 	         if not lru.patternscheck(app_launched):
-	    	      '''Do something'''
+	    	      '''Not a pattern--> LRU Caching'''
 	              lru.checkempty(app_launched)
 	    
 	    historylist.appendleft(app_launched)
@@ -146,6 +188,8 @@ class LruCache(object):
 	global breakpoints
         logs = [line.strip() for line in open(filename)]
 	lru.pushapplications(maxsize,logs)
+
+
 
     def getpatterns(self):
          '''Get Patterns from User'''
@@ -172,7 +216,7 @@ if __name__ == "__main__":
     historylist = dllist()
     script, filename = argv
     lru.getpatterns()
-    maxsize = 16
+    maxsize = 5
     lru.readinglogs(maxsize, filename)
     print '#' * 80
     print 'Final Contents of Stack   => \n',dlist
