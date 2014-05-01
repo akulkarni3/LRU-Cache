@@ -11,16 +11,6 @@ reboots = 0
 
 class LruCache(object):
 
-
-#    def autoinsert(self, app_launched, i):
-#        global temp
-#        global breakpoints
-#	k = 0
-#        while k < breakpoints[i]:
-#	     dlist.appendleft(array[temp+breakpoints[i]-1-k])
-#             k += 1
-
-
     def checkfull(self, app_launched):
     	global reboots
         if dlist.size < maxsize:
@@ -36,50 +26,50 @@ class LruCache(object):
 	   return None
 
 
-    def autofull(self,app_launched, i, temp):
+    def autofull(self,app_launched):
     	global reboots
-	global array
-	global breakpoints
         for past_app_launched in historylist:
 	   if past_app_launched == app_launched:
 	       reboots +=1
 	       break
-	k = 0
-	while k < breakpoints[i]:
-
-           if dlist.size < maxsize:
-	       dlist.appendleft(array[temp+breakpoints[i]-1-k])
-	   else:
-	       dlist.popright()
-               dlist.appendleft(array[temp+breakpoints[i]-1-k])
-	   k += 1
+        if dlist.size == maxsize:
+	   dlist.popright()
 	
 	return None
    
 
     def autoexists(self, app_launched, i, temp):
-        count = 0
 	global hits
 	global misses
 	global array
 	global breakpoints
 	k = 0
-	print 'breakpoints at i', i, breakpoints[i]
+	print 'breakpointts ', breakpoints[i]
 	while k < breakpoints[i]:
+	    count = 0
+	    print k
 	    for app in dlist:
 	        count+= 1 
+		print 'count is ', count-1
                 if array[temp+breakpoints[i]-1-k] == app:
-	    	    hits+= 1
+		    if k == breakpoints[i]-1:
+	    	        hits+= 1
 	            if app != dlist[0]:
 		        node = dlist.nodeat(count-1)
+			print 'Autoexist wala node ', node
+			print dlist
 	                dlist.remove(node)
+			print dlist
 		        dlist.appendleft(array[temp+breakpoints[i]-1-k])
-		        return None		    
+			print dlist
+		        break		    
                 else:
 	            if count == dlist.size:
-	                lru.autofull(app_launched, i,temp)
-		        misses += 1
-		        return None
+	                lru.autofull(app_launched)
+			dlist.appendleft(array[temp+breakpoints[i]-1-k])
+			if k == breakpoints[i]-1:
+		             misses += 1
+		        break
 	    k += 1		
 
  
@@ -93,8 +83,10 @@ class LruCache(object):
             if app_launched == app:
 	    	hits+= 1
 	        if app != dlist[0]:
+		    print 'alreadyexists wala', dlist
 		    node = dlist.nodeat(count-1)
 	            dlist.remove(node)
+		    print dlist
 		    dlist.appendleft(app_launched)
 		    return None
 		    
@@ -122,13 +114,12 @@ class LruCache(object):
 	global breakpoints
 
     	if dlist.size == 0:
-	     if i != 1:
-	          i -= 1
-#	     lru.autoinsert(app_launched, i)
-
              k = 0
 	     print array[temp]
+	     print i
+	     print breakpoints
 	     print 'element = ', temp+breakpoints[i]-1-k
+	     print 'i in emptycheck called by patterncheck = ', i
 
              while k < breakpoints[i]:
 	        dlist.appendleft(array[temp+breakpoints[i]-1-k])
@@ -151,13 +142,13 @@ class LruCache(object):
 	for traverse in breakpoints:
 	     index = index + traverse
 	     temp = index - traverse
-	     i += 1
+	     print 'i created by patterncheck = ', i
 	     if app_launched == array[temp]:
-	          print 'its a match at position i =', temp, "starting at i = 0"
+	          print 'its a match at position  =', temp, "starting from 0"
 		  lru.autoemptycheck(app_launched, i, temp)
 		  return True
-	     
-
+             i += 1
+	    
 
 
     def pushapplications(self, maxsize, logs):
@@ -185,7 +176,6 @@ class LruCache(object):
         txt = open(filename)
         print "The log file used is %r: " % filename
 	global logs
-	global breakpoints
         logs = [line.strip() for line in open(filename)]
 	lru.pushapplications(maxsize,logs)
 
@@ -200,7 +190,6 @@ class LruCache(object):
 	 print "Enter size of ALL Patterns starting from first to last seperated by space "
 	 patternsize =  raw_input()
 	 breakpoints = map(int,patternsize.split())
-	 breakpoints.insert(0,0)
 	 print breakpoints
          print 'Print out Patterns seperated by a space'
          patternsize =  raw_input()
