@@ -1,0 +1,25 @@
+---- Apr 15, 2014 11:18:19 PM ----
+
+04-15 23:18:31.456   899   899 I ActivityManager: Timeline: Activity_launch_request id:com.jiubang.browser time:46632054
+
+04-15 23:18:52.068   899   899 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.apps.docs time:46652669
+
+04-15 23:18:53.039 12208 12208 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.apps.docs time:46653638
+
+04-15 23:19:00.077   899   899 I ActivityManager: Timeline: Activity_launch_request id:scd.lcex time:46660670
+
+04-15 23:19:07.494   899   899 I ActivityManager: Timeline: Activity_launch_request id:com.ljmobile.system.app time:46668084
+
+04-15 23:19:07.935 12334 12334 I ActivityManager: Timeline: Activity_launch_request id:com.ljmobile.system.app time:46668529
+
+04-15 23:23:24.599   899   899 I ActivityManager: Timeline: Activity_launch_request id:com.saavn.android time:46925199
+
+04-15 23:23:47.533 13174 13174 I ActivityManager: Timeline: Activity_launch_request id:com.android.packageinstaller time:46948127
+
+04-15 23:23:53.309 13174 13174 I ActivityManager: Timeline: Activity_launch_request id:com.android.packageinstaller time:46953904
+
+04-15 23:24:00.127 13174 13174 I ActivityManager: Timeline: Activity_launch_request id:com.android.packageinstaller time:46960724
+
+04-15 23:24:21.249 13174 13174 I ActivityManager: Timeline: Activity_launch_request id:com.android.packageinstaller time:46981844
+
+---- Apr 15, 2014 11:26:36 PM ----

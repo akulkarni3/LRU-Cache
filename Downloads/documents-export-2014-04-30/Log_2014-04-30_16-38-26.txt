@@ -1,0 +1,31 @@
+---- Apr 30, 2014 4:38:26 PM ----
+
+04-30 16:38:46.640   929   929 I ActivityManager: Timeline: Activity_launch_request id:cn.wps.moffice_eng time:55074406
+
+04-30 16:38:47.571 10391 10391 I ActivityManager: Timeline: Activity_launch_request id:cn.wps.moffice_eng time:55075333
+
+04-30 16:38:47.882 10414 10414 I ActivityManager: Timeline: Activity_launch_request id:cn.wps.moffice_eng time:55075647
+
+04-30 16:38:56.111   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:55083877
+
+04-30 16:39:24.761  5756  5756 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:55112527
+
+04-30 16:55:56.723   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:55209554
+
+04-30 16:55:56.844  1330  1330 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:55209670
+
+04-30 17:04:45.290   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:55633876
+
+04-30 17:07:22.849   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.android.gallery3d time:55791438
+
+04-30 18:11:37.575   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:56422581
+
+04-30 18:11:38.936 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:56423946
+
+04-30 18:17:39.984 17725 17725 I ActivityManager: Timeline: Activity_launch_request id:com.android.gallery3d time:56558858
+
+04-30 18:58:44.302   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.devhd.feedly time:56673632
+
+04-30 18:59:10.820   929   929 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:56700155
+
+---- Apr 30, 2014 7:09:25 PM ----

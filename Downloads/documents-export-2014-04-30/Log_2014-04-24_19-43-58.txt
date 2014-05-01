@@ -1,0 +1,131 @@
+---- Apr 24, 2014 7:43:58 PM ----
+
+04-24 19:44:09.032 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.speedsoftware.rootexplorer time:120355829
+
+04-24 19:44:57.293 14862 14862 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.apps.docs time:120404098
+
+04-24 19:44:58.264 15087 15087 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.apps.docs time:120405067
+
+04-24 19:55:39.171  2575  2575 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:120641781
+
+04-24 19:58:25.222 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.android.gallery3d time:120790132
+
+04-24 20:08:05.063 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.jrtstudio.AnotherMusicPlayer time:121128297
+
+04-24 20:08:13.142 17963 18008 I ActivityManager: Timeline: Activity_launch_request id:com.jrtstudio.AnotherMusicPlayer time:121136377
+
+04-24 20:24:50.370  2575  2575 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:121620625
+
+04-24 20:29:30.924  2575  2575 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:121690171
+
+04-24 20:29:55.680  2575  2575 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:121714931
+
+04-24 20:33:03.622 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.talk time:121775567
+
+04-24 20:34:58.646 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:121863242
+
+04-24 20:35:05.493 21447 21447 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:121870082
+
+04-24 20:35:27.417 21447 21447 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:121892016
+
+04-24 20:35:27.777 21447 21447 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:121892371
+
+04-24 20:35:53.284 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:121917881
+
+04-24 20:35:58.180 14788 14788 I ActivityManager: Timeline: Activity_launch_request id:eu.chainfire.supersu time:121922770
+
+04-24 20:36:17.040 20706 20706 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:121941638
+
+04-24 20:39:42.769 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.smarterdroid.wififiletransfer time:122028280
+
+04-24 20:42:46.775 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.speedsoftware.rootexplorer time:122212280
+
+04-24 20:42:58.678 22143 22143 I ActivityManager: Timeline: Activity_launch_request id:com.android.packageinstaller time:122224191
+
+04-24 20:43:05.235 22143 22143 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122230748
+
+04-24 20:43:16.297 22224 22224 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122241818
+
+04-24 20:43:57.150 22224 22224 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122282667
+
+04-24 20:44:11.215 22419 22419 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122296724
+
+04-24 20:44:28.133 22419 22419 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122313648
+
+04-24 20:44:46.062 22419 22419 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122331578
+
+04-24 20:45:47.258 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122392775
+
+04-24 20:46:05.807 22866 22866 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122411323
+
+04-24 20:46:55.711 22866 22866 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122461229
+
+04-24 20:47:00.746 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:122466264
+
+04-24 20:47:08.554 20706 20706 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:122474061
+
+04-24 20:53:39.081 24182 24182 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122864596
+
+04-24 20:53:51.825 24182 24182 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122877334
+
+04-24 20:53:52.616 24182 24182 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122878123
+
+04-24 20:53:57.471 24182 24182 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:122882985
+
+04-24 20:54:08.743 21447 21447 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:122894254
+
+04-24 20:56:58.504 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123064015
+
+04-24 20:57:00.316 24906 24906 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123065822
+
+04-24 20:57:07.784 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123073299
+
+04-24 20:57:10.797 25019 25019 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123076318
+
+04-24 21:14:38.460 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123542188
+
+04-24 21:14:40.372 26641 26641 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123544095
+
+04-24 21:14:43.035 26641 26641 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123546751
+
+04-24 21:15:09.843 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123573561
+
+04-24 21:15:34.059 26950 26950 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123597784
+
+04-24 21:16:11.079 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123634801
+
+04-24 21:16:35.805 26950 26950 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123659539
+
+04-24 21:16:40.210 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123663937
+
+04-24 21:17:08.360 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.android.settings time:123692080
+
+04-24 21:17:28.301 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123712025
+
+04-24 21:17:43.908 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123727636
+
+04-24 21:17:48.192 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123731910
+
+04-24 21:18:05.831 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123749556
+
+04-24 21:18:23.440 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123767161
+
+04-24 21:18:40.368 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:oliver.ehrenmueller.dbadmin time:123784092
+
+04-24 21:18:50.549 28990 28990 I ActivityManager: Timeline: Activity_launch_request id:com.speedsoftware.rootexplorer time:123794278
+
+04-24 21:20:20.104 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123883826
+
+04-24 21:20:23.228 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123886953
+
+04-24 21:20:26.411 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123890139
+
+04-24 21:20:28.513 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123892236
+
+04-24 21:20:44.631 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123908357
+
+04-24 21:20:52.499 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123916224
+
+04-24 21:21:03.971 27662 27662 I ActivityManager: Timeline: Activity_launch_request id:com.example.foodguru time:123927690
+
+04-24 21:21:14.342 27662 27662 I ActivityManager: Timelin

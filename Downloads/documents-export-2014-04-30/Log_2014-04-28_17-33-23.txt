@@ -1,0 +1,183 @@
+---- Apr 28, 2014 5:33:23 PM ----
+
+04-28 17:33:30.600   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.kaamosmobile.lyrics time:903067
+
+04-28 17:33:35.084   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.apps.docs time:907545
+
+04-28 17:33:36.336  6814  6814 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.apps.docs time:908799
+
+04-28 17:36:54.469  1141  1141 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.googlequicksearchbox time:1015913
+
+04-28 17:37:05.601   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.googlequicksearchbox time:1027045
+
+04-28 17:37:05.661  1141  1141 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.googlequicksearchbox time:1027108
+
+04-28 17:51:47.809   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1585034
+
+04-28 17:51:48.750  8900  8900 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1585976
+
+04-28 17:51:51.363  8900  8900 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1588589
+
+04-28 17:51:54.226  8900  8900 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1591448
+
+04-28 17:51:55.677  8900  8900 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1592894
+
+04-28 17:52:08.091  8900  8900 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1605315
+
+04-28 17:52:26.310  8900  8900 I ActivityManager: Timeline: Activity_launch_request id:com.dodock.footylight time:1623534
+
+04-28 18:03:56.997   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:2314219
+
+04-28 18:03:57.588 10753 10753 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:2314804
+
+04-28 18:03:57.728  1586  1586 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:2314949
+
+04-28 18:03:58.048  1586  1586 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:2315268
+
+04-28 18:10:46.344 12121 12121 I ActivityManager: Timeline: Activity_launch_request id:com.jiubang.browser time:2723567
+
+04-28 18:15:15.294   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:2887074
+
+04-28 18:15:22.782 13094 13094 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:2894558
+
+04-28 18:15:33.433 13094 13094 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:2905204
+
+04-28 18:15:33.654 13094 13094 I ActivityManager: Timeline: Activity_launch_request id:com.android.vending time:2905429
+
+04-28 18:15:42.423 13094 13094 I ActivityManager: Timeline: Activity_launch_request id:com.salapp.phoneinfo time:2914197
+
+04-28 18:15:46.337 13450 13479 I ActivityManager: Timeline: Activity_launch_request id:com.salapp.phoneinfo time:2918109
+
+04-28 18:15:55.547 13450 13450 I ActivityManager: Timeline: Activity_launch_request id:com.salapp.phoneinfo time:2927328
+
+04-28 18:21:45.335   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:3052320
+
+04-28 18:21:45.515  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:3052501
+
+04-28 18:21:47.507  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:3054493
+
+04-28 18:24:10.179  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:3197163
+
+04-28 19:07:03.391  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.android.camera2 time:5287530
+
+04-28 19:11:20.595  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:5544736
+
+04-28 19:23:19.242  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:6263388
+
+04-28 19:23:23.807  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:6267940
+
+04-28 19:37:43.194  1141  1141 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.googlequicksearchbox time:7127335
+
+04-28 20:26:39.397  4926  4926 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:10063532
+
+04-28 20:28:24.259   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:10168408
+
+04-28 20:28:28.173  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:10172314
+
+04-28 20:37:38.460   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:10722603
+
+04-28 20:37:40.102  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:10724248
+
+04-28 20:41:27.444  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:10951584
+
+04-28 20:44:41.151  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11145295
+
+04-28 20:45:20.243   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11184380
+
+04-28 20:45:20.353  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11184498
+
+04-28 20:45:21.825  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11185968
+
+04-28 20:46:31.629   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11255772
+
+04-28 20:46:33.251  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11257393
+
+04-28 20:46:39.978  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11264113
+
+04-28 20:47:12.212  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11296355
+
+04-28 20:47:17.038  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11301172
+
+04-28 20:47:38.230  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11322377
+
+04-28 20:49:02.520  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11406663
+
+04-28 20:49:05.083  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:11409229
+
+04-28 21:08:39.891   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.googlequicksearchbox time:12291742
+
+04-28 21:08:39.941  1141  1141 I ActivityManager: Timeline: Activity_launch_request id:com.google.android.googlequicksearchbox time:12291799
+
+04-28 21:17:10.156  1586  1586 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:12802002
+
+04-28 21:17:10.166  1586  1586 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:12802016
+
+04-28 21:17:47.946  1586 31364 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:12839790
+
+04-28 21:17:48.186  1586  1586 I ActivityManager: Timeline: Activity_launch_request id:com.facebook.katana time:12840033
+
+04-28 21:18:10.991 31413 31413 I ActivityManager: Timeline: Activity_launch_request id:com.jiubang.browser time:12862849
+
+04-28 21:18:45.958 31413 31413 I ActivityManager: Timeline: Activity_launch_request id:com.jiubang.browser time:12897800
+
+04-28 22:56:22.683   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.jiubang.browser time:18436693
+
+04-28 22:57:21.235   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:18495240
+
+04-28 22:57:21.315  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:18495321
+
+04-28 22:57:55.992  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:18530004
+
+04-28 22:58:47.377  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:18581384
+
+04-28 23:06:29.800  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19043812
+
+04-28 23:06:34.025  4926  4926 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:19048030
+
+04-28 23:08:24.115  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19134805
+
+04-28 23:08:37.529   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19148213
+
+04-28 23:08:37.779  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19148466
+
+04-28 23:08:42.404  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19153094
+
+04-28 23:08:58.161  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19168850
+
+04-28 23:09:01.765  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19172454
+
+04-28 23:09:26.351  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19197049
+
+04-28 23:10:02.330  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19233014
+
+04-28 23:12:13.560  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19364247
+
+04-28 23:14:22.748  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19493436
+
+04-28 23:19:56.025   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19807264
+
+04-28 23:19:57.236  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:19808485
+
+04-28 23:23:33.126   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:20024370
+
+04-28 23:23:35.189  4926  4926 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:20026435
+
+04-28 23:30:10.230  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:20421472
+
+04-28 23:30:12.723  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:20423966
+
+04-28 23:33:22.285  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:20613528
+
+04-28 23:33:37.482   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.android.dialer time:20623092
+
+04-28 23:33:43.928   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:20629538
+
+04-28 23:33:45.140  4926  4926 I ActivityManager: Timeline: Activity_launch_request id:com.android.mms time:20630759
+
+04-28 23:41:22.925   909   909 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:20860565
+
+04-28 23:41:28.721  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:20866363
+
+04-28 23:58:01.129  1345  1345 I ActivityManager: Timeline: Activity_launch_request id:com.whatsapp time:21090746
+
+---- Apr 28, 2014 11:58:38 PM ----
