@@ -44,24 +44,17 @@ class LruCache(object):
 	global array
 	global breakpoints
 	k = 0
-	print 'breakpointts ', breakpoints[i]
 	while k < breakpoints[i]:
 	    count = 0
-	    print k
 	    for app in dlist:
 	        count+= 1 
-		print 'count is ', count-1
                 if array[temp+breakpoints[i]-1-k] == app:
 		    if k == breakpoints[i]-1:
 	    	        hits+= 1
 	            if app != dlist[0]:
 		        node = dlist.nodeat(count-1)
-			print 'Autoexist wala node ', node
-			print dlist
 	                dlist.remove(node)
-			print dlist
 		        dlist.appendleft(array[temp+breakpoints[i]-1-k])
-			print dlist
 		        break		    
                 else:
 	            if count == dlist.size:
@@ -83,10 +76,8 @@ class LruCache(object):
             if app_launched == app:
 	    	hits+= 1
 	        if app != dlist[0]:
-		    print 'alreadyexists wala', dlist
 		    node = dlist.nodeat(count-1)
 	            dlist.remove(node)
-		    print dlist
 		    dlist.appendleft(app_launched)
 		    return None
 		    
@@ -115,12 +106,6 @@ class LruCache(object):
 
     	if dlist.size == 0:
              k = 0
-	     print array[temp]
-	     print i
-	     print breakpoints
-	     print 'element = ', temp+breakpoints[i]-1-k
-	     print 'i in emptycheck called by patterncheck = ', i
-
              while k < breakpoints[i]:
 	        dlist.appendleft(array[temp+breakpoints[i]-1-k])
                 k += 1
@@ -142,9 +127,7 @@ class LruCache(object):
 	for traverse in breakpoints:
 	     index = index + traverse
 	     temp = index - traverse
-	     print 'i created by patterncheck = ', i
 	     if app_launched == array[temp]:
-	          print 'its a match at position  =', temp, "starting from 0"
 		  lru.autoemptycheck(app_launched, i, temp)
 		  return True
              i += 1
@@ -205,7 +188,7 @@ if __name__ == "__main__":
     historylist = dllist()
     script, filename = argv
     lru.getpatterns()
-    maxsize = 5
+    maxsize = 16
     lru.readinglogs(maxsize, filename)
     print '#' * 80
     print 'Final Contents of Stack   => \n',dlist
