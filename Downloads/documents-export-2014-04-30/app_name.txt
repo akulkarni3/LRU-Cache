@@ -1,5 +1,3 @@
-The logfile used is 'app_name.txt': 
-The logfile used is 'app.txt':
 id:cn.wps.moffice_eng
 id:com.dodock.footylight
 id:com.whatsapp

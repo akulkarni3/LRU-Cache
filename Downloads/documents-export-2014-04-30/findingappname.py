@@ -1,7 +1,6 @@
 from sys import argv
 script, filename = argv
 txt = open (filename)
-print "The logfile used is %r: " %filename
 app_name = "id:"
 logs = [line.strip() for line in open(filename)]
 

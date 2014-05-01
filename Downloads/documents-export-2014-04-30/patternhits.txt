@@ -1,0 +1,9 @@
+foodguru -> dbadmin  hits 6
+quicksearch -> browser -> chrome hits 8
+dialer -> phone hits 13
+documentsui -> rootexplorer
+MusicPlayer 20 facebook 15 whatsapp 90 mms 21 gallery3d 14 videoplayer 8 root 20 docs 11
+browser 33 chrome 10 
+footylight -> facebook   5-6 hits
+docs -> root -> music player
+replace chrome juibang browser --> browser
