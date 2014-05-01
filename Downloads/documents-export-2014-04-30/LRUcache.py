@@ -95,7 +95,7 @@ if __name__ == "__main__":
     dlist = dllist()
     historylist = dllist()
     script, filename = argv
-    maxsize =15
+    maxsize = 15
     lru.readinglogs(maxsize, filename)
     print '#' * 80
     print 'Final Contents of Stack   => \n',dlist

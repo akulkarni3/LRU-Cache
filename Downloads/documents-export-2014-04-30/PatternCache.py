@@ -28,12 +28,13 @@ class LruCache(object):
 
     def autofull(self,app_launched):
     	global reboots
-        for past_app_launched in historylist:
-	   if past_app_launched == app_launched:
-	       reboots +=1
-	       break
         if dlist.size == maxsize:
 	   dlist.popright()
+	   for past_app_launched in historylist:
+	       if past_app_launched == app_launched:
+	           reboots +=1
+	           break
+
 	
 	return None
    
@@ -51,7 +52,7 @@ class LruCache(object):
                 if array[temp+breakpoints[i]-1-k] == app:
 		    if k == breakpoints[i]-1:
 	    	        hits+= 1
-	            if app != dlist[0]:
+	            if app != dlist[0] or app == dlist[0]:
 		        node = dlist.nodeat(count-1)
 	                dlist.remove(node)
 		        dlist.appendleft(array[temp+breakpoints[i]-1-k])
@@ -75,7 +76,7 @@ class LruCache(object):
 	    count+= 1 
             if app_launched == app:
 	    	hits+= 1
-	        if app != dlist[0]:
+	        if app != dlist[0] or app ==dlist[0]:
 		    node = dlist.nodeat(count-1)
 	            dlist.remove(node)
 		    dlist.appendleft(app_launched)
@@ -143,12 +144,12 @@ class LruCache(object):
 	    	 print '-' * 80
 	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses
 	     
-	    if dlist.size != 0 and app_launched == dlist[0]:
-		 hits += 1
-	    else:
-	         if not lru.patternscheck(app_launched):
-	    	      '''Not a pattern--> LRU Caching'''
-	              lru.checkempty(app_launched)
+#	    if dlist.size != 0 and app_launched == dlist[0]:
+#		 hits += 1
+#	    else:
+	    if not lru.patternscheck(app_launched):
+	    	 '''Not a pattern--> LRU Caching'''
+	         lru.checkempty(app_launched)
 	    
 	    historylist.appendleft(app_launched)
     

@@ -1,9 +1,18 @@
-foodguru -> dbadmin  hits 6
-quicksearch -> browser -> chrome hits 8
-dialer -> phone hits 13
-documentsui -> rootexplorer
-MusicPlayer 20 facebook 15 whatsapp 90 mms 21 gallery3d 14 videoplayer 8 root 20 docs 11
-browser 33 chrome 10 
-footylight -> facebook   5-6 hits
-docs -> root -> music player
+foodguru -> dbadmin                      2
+quicksearch -> browser -> chrome         3
+dialer -> phone                          2
+docs -> root -> music player             3
 replace chrome juibang browser --> browser
+footylight -> facebook                   2
+
+Music player -> browser                  2
+
+gallery3d -> whatsapp                    2
+
+facebook ->Music Player -> whatsapp      3
+
+mms-> whatsapp -> chrome                 3
+
+whatsapp -> dialer                       2
+
+id:com.example.foodguru id:oliver.ehrenmueller.dbadmin id:com.google.android.googlequicksearchbox id:com.jiubang.browser id:com.android.chrome id:com.android.dialer id:com.android.phone id:com.google.android.apps.docs  id:com.speedsoftware.rootexplorer id:com.jrtstudio.AnotherMusicPlayer id:com.dodock.footylight id:com.facebook.katana id:com.jrtstudio.AnotherMusicPlayer id:com.jiubang.browser id:com.android.gallery3d id:com.whatsapp id:com.facebook.katana id:com.jrtstudio.AnotherMusicPlayer id:com.whatsapp id:com.android.mms id:com.whatsapp id:com.android.chrome id:com.whatsapp id:com.android.dialer
