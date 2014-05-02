@@ -17,10 +17,10 @@ class LruCache(object):
 	   dlist.appendleft(app_launched)
 	   return None
 	else:
-	   for past_app_launched in historylist:
-	       if past_app_launched == app_launched:
-	            reboots +=1
-		    break
+#	   for past_app_launched in historylist:
+#	       if past_app_launched == app_launched:
+#	            reboots +=1
+#		    break
 	   dlist.popright()
            dlist.appendleft(app_launched)
 	   return None
@@ -28,12 +28,13 @@ class LruCache(object):
 
     def autofull(self,app_launched):
     	global reboots
-        for past_app_launched in historylist:
-	   if past_app_launched == app_launched:
-	       reboots +=1
-	       break
         if dlist.size == maxsize:
 	   dlist.popright()
+	   for past_app_launched in historylist:
+	       if past_app_launched == app_launched:
+	           reboots +=1
+	           break
+
 	
 	return None
    
@@ -43,6 +44,7 @@ class LruCache(object):
 	global misses
 	global array
 	global breakpoints
+	global reboots
 	k = 0
 	while k < breakpoints[i]:
 	    count = 0
@@ -51,7 +53,7 @@ class LruCache(object):
                 if array[temp+breakpoints[i]-1-k] == app:
 		    if k == breakpoints[i]-1:
 	    	        hits+= 1
-	            if app != dlist[0]:
+	            if app != dlist[0] or app == dlist[0]:
 		        node = dlist.nodeat(count-1)
 	                dlist.remove(node)
 		        dlist.appendleft(array[temp+breakpoints[i]-1-k])
@@ -59,6 +61,10 @@ class LruCache(object):
                 else:
 	            if count == dlist.size:
 	                lru.autofull(app_launched)
+	                for past_app_launched in historylist:
+	                     if past_app_launched == array[temp] and array[temp] == array[temp-breakpoints[i]-1-k]:
+	                          reboots +=1
+		                  break
 			dlist.appendleft(array[temp+breakpoints[i]-1-k])
 			if k == breakpoints[i]-1:
 		             misses += 1
@@ -75,7 +81,7 @@ class LruCache(object):
 	    count+= 1 
             if app_launched == app:
 	    	hits+= 1
-	        if app != dlist[0]:
+	        if app != dlist[0] or app ==dlist[0]:
 		    node = dlist.nodeat(count-1)
 	            dlist.remove(node)
 		    dlist.appendleft(app_launched)
@@ -99,6 +105,7 @@ class LruCache(object):
             lru.alreadyexists(app_launched)
 
 
+	
 
     def autoemptycheck(self, app_launched,i,temp):
     	global misses
@@ -139,16 +146,16 @@ class LruCache(object):
 	global hits
     	for app_launched in logs:
 	    log_count += 1
-	    if log_count == 5 or log_count == 10 or log_count == 15 or log_count == 20 or log_count == 25:
+	    if log_count == 50 or log_count == 100 or log_count == 200 or log_count == 300 or log_count == 400:
 	    	 print '-' * 80
 	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses
 	     
-	    if dlist.size != 0 and app_launched == dlist[0]:
-		 hits += 1
-	    else:
-	         if not lru.patternscheck(app_launched):
-	    	      '''Not a pattern--> LRU Caching'''
-	              lru.checkempty(app_launched)
+#	    if dlist.size != 0 and app_launched == dlist[0]:
+#		 hits += 1
+#	    else:
+	    if not lru.patternscheck(app_launched):
+	    	 '''Not a pattern--> LRU Caching'''
+	         lru.checkempty(app_launched)
 	    
 	    historylist.appendleft(app_launched)
     
@@ -188,7 +195,7 @@ if __name__ == "__main__":
     historylist = dllist()
     script, filename = argv
     lru.getpatterns()
-    maxsize = 16
+    maxsize = 15
     lru.readinglogs(maxsize, filename)
     print '#' * 80
     print 'Final Contents of Stack   => \n',dlist
