@@ -66,11 +66,12 @@ class LruCache(object):
     def pushapplications(self, maxsize, logs):
     	global log_count
 	global hits
+        global reboots
     	for app_launched in logs:
 	    log_count+= 1
 	    if log_count == 100 or log_count == 200 or log_count == 300 or log_count == 400 or log_count == 50:
 	    	 print '-' * 80
-	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses
+	         print 'Processed logs = ',log_count,' Hits = ',hits ,' Misses = ', misses,' Reboots = ',reboots
 	    if dlist.size != 0 and app_launched == dlist[0]:
 	    	 hits += 1
 	   #     print "Both are same apps "+ app_launched +" and  "+ dlist[0]
@@ -104,4 +105,3 @@ if __name__ == "__main__":
     print 'Total misses              = ', misses
     print 'Total Application Reboots = ', reboots
     print '#' * 80
-
